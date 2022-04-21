@@ -69,7 +69,7 @@ def create_app(test_config=None):
     @app.route('/select_tt')
     def getsome():
         try:
-            instr = "select * from tt"
+            instr = "select * from tt limit 1"
             cur.execute(instr)
             tt_records = cur.fetchone()
             answer = ''
